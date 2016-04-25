@@ -1,0 +1,445 @@
+* {
+      -webkit-user-select: none;  /* Chrome all / Safari all */
+      -moz-user-select: none;     /* Firefox all */
+      -ms-user-select: none;      /* IE 10+ */
+      user-select: none;          /* Likely future */ 
+    box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+body { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+/*    background: rgb(23,0,82);*/
+/*    background: #161675;*/
+    background: #4141E4;
+/*    padding-bottom: 70px; */
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+}
+
+label {
+    font-weight: normal;
+}
+
+.container-fluid {
+    padding: 0 10px;
+}
+
+.shift-effect {
+    margin: 7px;
+}
+
+.drag-effect {
+    z-index: 111 !important;
+}
+
+.toggleBtn {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border: 2px solid darkgray;
+/*    background: gray;*/
+/*    border-radius: 50%;*/
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+.toggleBtn span {
+    position: absolute;
+    display: inline-block;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    background: orangered;
+/*    border-radius: 50%;*/
+}
+
+.off>.toggleBtn span {
+    display: none;
+}
+
+.tiles-container {
+/*    margin: 15px 0;*/
+    position: relative;
+/*    margin-top: 100px;*/
+    padding-bottom: 70px;
+}
+
+.grid {
+    position: absolute;
+    border: 1px solid lightgray;
+    z-index: 9;
+    color: #FFF;
+}
+
+.tile {
+    list-style: none;
+    float: left;
+    display: block;
+/*    border: 1px solid #000;*/
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    z-index: 10;
+/*
+    float: left;
+    position: relative;
+*/
+}
+
+.movementMode .tile.being-dragged .tileInnerContainer {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
+.tile.being-dragged {
+    z-index: 9999;
+/*    background: rgba(255,255,255,.3);*/
+}
+
+.tile.being-dragged * {
+/*    display: none;*/
+}
+
+.tile .tileInnerContainer {
+/*    border: 1px solid #00F;*/
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.tile .tileInnerContainer .live {
+    height: 100%;
+    width: 100%;
+}
+
+.tile .tileInnerContainer .tileMask {
+    position: absolute;
+/*    background: rgba(0,0,0,.6);*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    display: none;
+}
+
+.tile .liveTxt {
+    position: absolute;
+/*    top: 0;*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+    color: #FF0;
+    font-size: 1.8rem;
+}
+
+.resizeMode .tile .tileInnerContainer .tileMask {
+    display: block;
+}
+
+.resizeMode .tile .tileInnerContainer,
+.movementMode .tile .tileInnerContainer {
+    cursor: -webkit-grab;
+    cursor: grab;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.resizeMode .tile .tileInnerContainer {
+    -webkit-animation-name: customPulse;
+    animation-name: customPulse;
+}
+
+.movementMode .tile .tileInnerContainer {
+/*    border: 2px solid yellow;*/
+    -webkit-animation-name: customShake;
+    animation-name: customShake;
+}
+
+.tile .tileInnerContainer .resizeBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    color: aqua;
+    display: inline-block;
+}
+
+.xs .tile {
+    padding: 2.5px;
+}
+
+.sm .tile {
+    padding: 4px;
+}
+
+.md .tile {
+    padding: 4px;
+}
+
+.tile .name {
+    display: block;
+    text-overflow: ellipsis;
+    height: 20px;
+    overflow: hidden;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    color: #FFF;
+    font-size: 13px;
+    padding: 0 5px;
+    white-space: nowrap;
+}
+
+.tile .fontIcon {
+    font-size: 150px;
+    margin-top: 60px;
+    color: #FFF;
+}
+
+.tile .fontImg {
+    height: 100%;
+    width: 100%;
+}
+
+.topPanel {
+    margin-top: 20px;
+    color: #FFF;
+}
+
+.topPanel .welcomeTxt {
+    font-size: 30px;
+}
+
+.topPanel #microProfile {
+    float: right;
+    position: relative;
+/*    border: 1px solid #FFF;*/
+    height: 60px;
+    width: 300px;
+}
+
+.topPanel #microProfile * {
+    position: absolute;
+}
+
+.topPanel #microProfile #userName {
+    font-size: 22px;
+    right: 60px;
+    top: 0;
+}
+
+.topPanel #microProfile #profilePic {
+    height: 50px;
+    width: 50px;
+    float: right;
+    right: 0;
+    top: 0;
+}
+
+.topPanel #microProfile .desc {
+    top: 27px;
+    right: 60px;
+    font-size: 15px;
+}
+/*
+
+.tile.medium .fontIcon,
+.tile.rectangle .fontIcon{
+    font-size: 50px;
+    margin-top: 40px;
+}
+
+.tile.small .fontIcon {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.tile.medium .fontIcon {
+    font-size: 50px;
+    margin-top: 40px;
+}
+*/
+
+#taskBar {
+    position: fixed;
+    height: 45px;
+    width: 100%;
+    bottom: 0;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    background: rgba(25, 22, 22, 0.95);
+}
+
+#startBtn {
+    color: #E1E1EA;
+    background: #000;
+    border: 2px outset #4141e4;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 2px;
+}
+
+#startMenu {
+    width: 200px;
+    position: absolute;
+    bottom: 45px;
+    list-style: none;
+/*    background: #87e;*/
+/*    background: #000;*/
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    padding: 10px 0;
+}
+
+#startMenu>li {
+    padding: 5px 15px;
+    color: #FFF;
+    position: relative;
+}
+
+#startMenu>li:hover {
+    background: #45F;
+}
+
+.tileResizeMenu {
+    text-align: left;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #FFF;
+    color: #111;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.tileResizeMenu li {
+    padding: 3px 15px;
+}
+
+.tileResizeMenu li:hover {
+    background: #5A2FAD;
+    color: #FFF;    
+}
+
+@media (min-width: 768px) {
+    
+    
+}
+
+@media (max-width: 767px) {
+    
+}
+
+
+/************* Animation Keyframes ******************/
+
+@-webkit-keyframes customShake {
+/*
+  from, to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+*/
+
+  25% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+
+  0%, 50%, 100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+    
+   75% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes customShake {
+  /*
+  from, to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+*/
+
+   25% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+
+  0%, 50%, 100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+    
+   75% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+
+@-webkit-keyframes customPulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(.95, .95, .95);
+    transform: scale3d(.95, .95, .95);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes customPulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(.95, .95, .95);
+    transform: scale3d(.95, .95, .95);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}

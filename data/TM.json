@@ -1,0 +1,165 @@
+{
+    "tileOrder": ["linkedIn","stackoverflow","galaxy","myPictures","asteroidattack","miniPuzzle","facebook","twitter","codotronixBlog","oneMall","offersplus","tankgular","gogoltugo","github","myBlog","bengalirecipes","reactTaskMan", "txtTile"],
+    "tiles": {            
+            "galaxy": {
+                "id": "galaxy",
+                "name": "Galaxy Website",
+                "size": "medium",
+                "iconType": "live",
+                "liveImgUrls": ["img/galaxy/galaxy.png"],
+                "link": "http://codotronix.github.io/galaxy/"
+            },
+            "codotronixBlog": {
+                "id": "codotronixBlog",
+                "name": "Learn with Me",
+                "size": "medium",
+                "iconType": "live",
+                "liveImgUrls": ["img/codotronixblog/CodotronixLogo.png"],
+                "bgColor": "rgba(255,255,255,.2)",
+                "link": "http://codotronix.barick.in/"
+            },
+            "reactTaskMan": {
+                "id": "reactTaskMan",
+                "name": "React TaskMan",
+                "size": "medium",
+                "iconType": "live",
+                "liveImgUrls": ["img/reactTaskman/react.png"],
+                "bgColor": "#653877",
+                "link": "http://codotronix.github.io/react-taskman"
+            },
+            "myPictures": {
+                "id": "myPictures",
+                "name": "My Pictures",
+                "size": "big",
+                "iconType": "live",
+                "liveImgUrls": ["img/myPictures/1.jpg", "img/myPictures/3.jpg", "img/myPictures/4.jpg"],
+                "liveTxts": ["Welcome to my Website", "Follow me at Twitter @codotronix"],
+                "fontColor": "ivory",
+                "bgColor": "rgba(255,255,255,.2)"
+            },
+            "txtTile": {
+                "id": "txtTile",
+                "name": "Hello Guest!",
+                "size": "rectangle",
+                "iconType": "live",
+                "liveTxts": ["Hi! I am Suman Barick and I love to Code", "This is the jQuery version of this site", "This site also has an AngularJS version at barick.in", "This site is inspired by Windows Metro Style"],
+                "fontColor": "#E4F978",
+                "bgColor": "rgba(255,255,255,.3)"
+            },
+            "bengalirecipes": {
+                "id": "bengalirecipes",
+                "name": "Bengali Recipes",
+                "size": "rectangle",
+                "iconType": "live",
+                "liveImgUrls": ["img/bengalirecipes/310x150.png", "img/bengalirecipes/appcomingsoon.png"],
+                "bgColor": "#AA0000",
+                "link": "http://codotronix.github.io/bengali-recipes"
+            },
+            "oneMall": {
+                "id": "oneMall",
+                "name": "One Mall",
+                "size": "small",
+                "iconType": "live",
+                "liveImgUrls": ["img/oneMall/onemall-rec.png"],
+                "bgColor": "#AA0000",
+                "link": "http://codotronix.github.io/one"
+            },
+            "github": {
+                "id": "github",
+                "name": "Github",
+                "size": "small",
+                "iconType": "font",
+                "icon": "fa fa-github",
+                "bgColor": "#0A5231"
+            },
+            "myBlog": {
+                "id": "myBlog",
+                "name": "My Blog",
+                "size": "rectangle",
+                "iconType": "live",
+                "liveImgUrls": ["img/myBlog/lwl.jpg"],
+                "bgColor": "#B2DE0C",
+                "link": "http://sumanbarick.blogspot.in/"
+            },
+            "facebook": {
+                "id": "facebook",
+                "name": "Facebook",
+                "size": "small",
+                "iconType": "font",
+                "icon": "fa fa-facebook-square",
+                "bgColor":"#3b5998",
+                "link":"http://facebook.com/codotronix"
+            },
+            "offersplus": {
+                "id": "offersplus",
+                "name": "Offersplus.in",
+                "size": "small",
+                "iconType": "live",
+                "liveImgUrls": ["img/offersplus/offersplus.in.png"],
+                "link": "http://offersplus.in"
+            },
+            "miniPuzzle": {
+                "id": "miniPuzzle",
+                "name": "Mini Puzzle",
+                "size": "rectangle",
+                "iconType": "live",
+                "liveImgUrls": ["img/minipuzzle/360.png", "img/minipuzzle/744x360.png"],
+                "bgColor": "rgba(255,255,255,.2)",
+                "link": "http://codotronix.github.io/sections/apps/minipuzzle/index.html"
+            },
+            "gogoltugo": {
+                "id": "gogoltugo",
+                "name": "Go Gol2, Go!",
+                "size": "rectangle",
+                "iconType": "live",
+                "liveImgUrls": ["img/goltu/800x400.png"],
+                "bgColor": "rgba(255,255,255,.2)",
+                "link": "http://codotronix.github.io/Dourio/Final/"
+            },
+            "tankgular": {
+                "id": "tankgular",
+                "name": "Tankgular !!!",
+                "size": "rectangle",
+                "iconType": "live",
+                "liveImgUrls": ["img/tankgular/tankgular.png"],
+                "bgColor": "rgba(255,255,255,.2)",
+                "link": "http://codotronix.github.io/Tankgular/"
+            },
+            "asteroidattack": {
+                "id": "asteroidattack",
+                "name": "Asteroid Aattack",
+                "size": "rectangle",
+                "iconType": "live",
+                "liveImgUrls": ["img/asteroidattack/astattack.png"],
+                "bgColor": "#000",
+                "link": "http://codotronix.github.io/Asteroid-Attack/play.html"
+            },
+            "linkedIn": {
+                "id": "linkedIn",
+                "name": "linkedin",
+                "size": "small",
+                "iconType": "font",
+                "icon": "fa fa-linkedin-square",
+                "bgColor": "darkred",
+                "link": "https://in.linkedin.com/in/sumanbarick"
+            },
+            "stackoverflow": {
+                "id": "stackoverflow",
+                "name": "Stack Overflow",
+                "size": "small",
+                "iconType": "font",
+                "icon": "fa fa-stack-overflow",
+                "bgColor": "#8E8C8C",
+                "link": "http://stackoverflow.com/users/5017556/suman-barick"
+            },
+            "twitter": {
+                "id": "twitter",
+                "name": "twitter",
+                "size": "small",
+                "iconType": "font",
+                "icon": "fa fa-twitter",
+                "bgColor": "#4099FF",
+                "link": "https://twitter.com/codotronix"
+            }
+    }
+}
