@@ -124,7 +124,8 @@ label {
     overflow: hidden;
 }
 
-.tile .tileInnerContainer .live {
+.tile .tileInnerContainer .live,
+.tile .tileInnerContainer .plugin{
     height: 100%;
     width: 100%;
 }
