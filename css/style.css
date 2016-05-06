@@ -73,7 +73,7 @@ label {
 }
 
 .tiles-container {
-/*    margin: 15px 0;*/
+    margin: 20px 0;
     position: relative;
 /*    margin-top: 100px;*/
     padding-bottom: 70px;
@@ -122,6 +122,7 @@ label {
     display: block;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .tile .tileInnerContainer .live,
@@ -229,8 +230,10 @@ label {
 }
 
 .topPanel {
-    margin-top: 20px;
+    margin-top: 30px;
     color: #FFF;
+    padding: 0 10px;
+    height: 55px;
 }
 
 .topPanel .welcomeTxt {
@@ -357,7 +360,17 @@ label {
 }
 
 @media (max-width: 767px) {
+    .welcomeTxt {
+        display: none;
+    }
     
+    .topPanel {
+        margin-top: 20px;
+    }
+    
+    .tiles-container {
+        margin: 10px 0;
+    }
 }
 
 

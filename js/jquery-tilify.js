@@ -228,7 +228,7 @@ var tile_plugins = {};
             * calculate height and width of the tiles depending on the tiles_container width
             */
             function calculateWidths () {        
-                var scrollBarWidth = 17;                                    //17px for scrollbar
+                var scrollBarWidth = 20;                                    //17px for scrollbar
                 //var tiles_Container_width = $('.tiles-container').width() - scrollBarWidth;
                 var tiles_Container_width = containerWidth - scrollBarWidth;
                 page_Width_Class = 'xs';
