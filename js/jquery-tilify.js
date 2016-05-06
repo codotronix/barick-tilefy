@@ -4,6 +4,14 @@
 * 1. tile order array, an array of id of each tile in order of their appearance
 * 2. object of tile Objects
 */
+
+//So that plugin scripts are cached....
+$.ajaxSetup({
+  cache: true
+});
+
+var tile_plugins = {};
+
 (function($) {    
     $.fn.tilify = function(TM, btn_toggleTileDnD, btn_toggleTileResize) {
         
@@ -77,6 +85,10 @@
                         
                         htm += '</div>';
                     }
+                    else if (tile.iconType == 'plugin') {
+                        htm += '<div class="plugin"></div>';
+                    }
+                    
                     
                     
                     //add the tile name
@@ -93,7 +105,30 @@
                 //add the clearSpaceDiv
                 htm += '<div style="position:absolute; left: 10px; right: 10px; height: 80px; top: ' +(clearSpaceDivPosition + 50) + 'px" ></div>';
                 
-                container.html(htm);           
+                container.html(htm);
+                
+                loadPlugins();
+            }
+            
+            
+            /*
+            * Once drawTiles has finished preparing the DOM, it will call the loadPlugins
+            */
+            function loadPlugins () {
+                for (var i in tiles) {
+                    if(tiles[i].iconType == 'plugin') {
+                        var pathToPlugin = 'tile_plugins/' + tiles[i].id + '/index.js';
+                        setTimeout(function(){
+                            $.getScript(pathToPlugin, function( data, textStatus, jqxhr ) {
+//                              console.log( data ); // Data returned
+//                              console.log( textStatus ); // Success
+//                              console.log( jqxhr.status ); // 200
+//                              console.log( "Load was performed." );
+                                
+                            });
+                        }, 100);
+                    }
+                }
             }
             
             
@@ -193,7 +228,7 @@
             * calculate height and width of the tiles depending on the tiles_container width
             */
             function calculateWidths () {        
-                var scrollBarWidth = 17;                                    //17px for scrollbar
+                var scrollBarWidth = 20;                                    //17px for scrollbar
                 //var tiles_Container_width = $('.tiles-container').width() - scrollBarWidth;
                 var tiles_Container_width = containerWidth - scrollBarWidth;
                 page_Width_Class = 'xs';

@@ -1,5 +1,7 @@
 {
-    "tileOrder": ["linkedIn","stackoverflow","galaxy","myPictures","asteroidattack","miniPuzzle","facebook","twitter","codotronixBlog","oneMall","offersplus","tankgular","gogoltugo","github","myBlog","bengalirecipes","reactTaskMan", "txtTile"],
+    "tileOrder": 
+    ["linkedIn", "stackoverflow", "galaxy", "myPictures", "asteroidattack", "miniPuzzle", "facebook", "twitter", "codotronixBlog", "oneMall", "offersplus", "tankgular", "gogoltugo", "github", "myBlog", "bengalirecipes", "reactTaskMan", "tileOfTime", "txtTile"],
+    
     "tiles": {            
             "galaxy": {
                 "id": "galaxy",
@@ -21,7 +23,7 @@
             "reactTaskMan": {
                 "id": "reactTaskMan",
                 "name": "React TaskMan",
-                "size": "medium",
+                "size": "small",
                 "iconType": "live",
                 "liveImgUrls": ["img/reactTaskman/react.png"],
                 "bgColor": "#653877",
@@ -160,6 +162,13 @@
                 "icon": "fa fa-twitter",
                 "bgColor": "#4099FF",
                 "link": "https://twitter.com/codotronix"
+            },
+            "tileOfTime": {
+                "id": "tileOfTime",
+                "name": "Tile of Time",
+                "size": "rectangle",
+                "iconType": "plugin",
+                "bgColor": "#070FF5"
             }
     }
 }
