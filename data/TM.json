@@ -1,6 +1,6 @@
 {
     "tileOrder": 
-    ["linkedIn", "stackoverflow", "galaxy", "myPictures", "asteroidattack", "miniPuzzle", "facebook", "twitter", "codotronixBlog", "oneMall", "offersplus", "tankgular", "gogoltugo", "github", "myBlog", "bengalirecipes", "reactTaskMan", "tileOfTime", "txtTile"],
+    ["linkedIn", "stackoverflow", "galaxy", "tileOfTime", "myPictures", "asteroidattack", "miniPuzzle", "facebook", "twitter", "codotronixBlog", "oneMall", "offersplus", "tankgular", "gogoltugo", "github", "myBlog", "bengalirecipes", "reactTaskMan", "txtTile"],
     
     "tiles": {            
             "galaxy": {

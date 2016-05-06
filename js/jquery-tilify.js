@@ -446,7 +446,7 @@ var tile_plugins = {};
                 
                 
                 //whenever a tile recieves a mousedown, assume dragging start
-                $('body').on('mousedown', '.movementMode .tile', function(ev){ //console.log('drag start');console.log(ev);
+                $('body').on('pointerdown', '.movementMode .tile', function(ev){ //console.log('drag start');console.log(ev);
 //                    ev.stopPropagation();
                     ev.preventDefault();
                     if(drag_in_progress) {return;}
@@ -461,7 +461,7 @@ var tile_plugins = {};
                 
                 
                 //whenever body recieves a mouseup, assume dragging end
-                $('body').on('mouseup', function(ev){ //console.log('drag end'); console.log(ev);
+                $('body').on('pointerup', function(ev){ //console.log('drag end'); console.log(ev);
                     //ev.stopPropagation();
                     if(!drag_in_progress) {return;}
                     drag_in_progress = false;
@@ -502,7 +502,7 @@ var tile_plugins = {};
                 });
                 
                 //while dragging the tile should move with mouse
-                $('body').on('mousemove', function (ev) {
+                $('body').on('pointermove', function (ev) {
                     ev.stopPropagation();
                     if(!tileMovementAllowed || !drag_in_progress || tile_Being_Dragged_ID == null) {
                         return;
