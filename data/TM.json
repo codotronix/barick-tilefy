@@ -72,7 +72,7 @@
                 "size": "small",
                 "iconType": "font",
                 "icon": "fa fa-github",
-                "bgColor": "#0A5231"
+                "bgColor": "rgba(10, 82, 49, 0.7)"
             },
             "myBlog": {
                 "id": "myBlog",
@@ -89,7 +89,7 @@
                 "size": "small",
                 "iconType": "font",
                 "icon": "fa fa-facebook-square",
-                "bgColor":"#3b5998",
+                "bgColor":"rgba(59, 89, 152, 0.7)",
                 "link":"http://facebook.com/codotronix"
             },
             "offersplus": {
@@ -142,7 +142,7 @@
                 "size": "small",
                 "iconType": "font",
                 "icon": "fa fa-linkedin-square",
-                "bgColor": "darkred",
+                "bgColor": "rgba(139, 0, 0, 0.7)",
                 "link": "https://in.linkedin.com/in/sumanbarick"
             },
             "stackoverflow": {
@@ -151,7 +151,7 @@
                 "size": "small",
                 "iconType": "font",
                 "icon": "fa fa-stack-overflow",
-                "bgColor": "#8E8C8C",
+                "bgColor": "rgba(142, 140, 140, 0.69)",
                 "link": "http://stackoverflow.com/users/5017556/suman-barick"
             },
             "twitter": {
@@ -160,7 +160,7 @@
                 "size": "small",
                 "iconType": "font",
                 "icon": "fa fa-twitter",
-                "bgColor": "#4099FF",
+                "bgColor": "rgba(64, 153, 255, 0.7)",
                 "link": "https://twitter.com/codotronix"
             },
             "tileOfTime": {
@@ -168,7 +168,7 @@
                 "name": "Tile of Time",
                 "size": "rectangle",
                 "iconType": "plugin",
-                "bgColor": "#070FF5"
+                "bgColor": "rgba(7, 15, 245, 0.44)"
             }
     }
 }
