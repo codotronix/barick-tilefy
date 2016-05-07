@@ -1,4 +1,5 @@
 /*
+* Author: Suman Barick - All rights reserved
 * usage: $('#tileContainer').tilify(TM)
 * TM is a json object that conatins
 * 1. tile order array, an array of id of each tile in order of their appearance
