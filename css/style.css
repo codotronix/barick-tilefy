@@ -17,12 +17,15 @@ body {
 /*    background: rgb(23,0,82);*/
 /*    background: #161675;*/
     background: #4141E4;
+    background-repeat:no-repeat;
+    background-size: cover;
 /*    padding-bottom: 70px; */
 }
 
 ul {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 ul li {
@@ -31,6 +34,30 @@ ul li {
 
 label {
     font-weight: normal;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,.5);
+    z-index: 99;
+    display: none;
+}
+
+.btn {
+    font-size: 20px;
+    padding: 7px 15px;
+    background: #000;
+    color: #FFF;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgba(0,0,233,.7);
 }
 
 .container-fluid {
@@ -353,6 +380,52 @@ label {
     background: #5A2FAD;
     color: #FFF;    
 }
+
+.itemSelector {
+    position: fixed;
+    z-index: 100;
+    top: 70px;
+    height: 300px;
+    display: none;
+}
+
+.itemSelector .heading {
+    background: rgba(21, 9, 90, 0.84);
+    color: #FFF;
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.itemSelector .imageSelector {
+    background: rgba(255, 255, 255, 0.9);
+    height: 100%;
+    overflow: auto;
+}
+
+.itemSelector .imageSelector li {
+    padding: 2px;
+    float: left;
+}
+
+.itemSelector .imageSelector li.selected,
+.itemSelector .imageSelector li:hover {
+    background: blue;
+    padding: 5px;
+}
+
+.itemSelector .imageSelector li img {
+    height: 100%;
+    width: 100%;
+}
+
+.itemSelector .panel_Btns {
+    background: rgba(0, 0, 0, 0.86);
+    text-align: right;
+    padding: 7px;
+}
+
+/*********** Media Queries ****************/
 
 @media (min-width: 768px) {
     
