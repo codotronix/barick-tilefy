@@ -23,6 +23,7 @@ body {
 ul {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 ul li {
@@ -31,6 +32,17 @@ ul li {
 
 label {
     font-weight: normal;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,.5);
+    z-index: 99;
+    display: none;
 }
 
 .container-fluid {
@@ -353,6 +365,40 @@ label {
     background: #5A2FAD;
     color: #FFF;    
 }
+
+.itemSelector {
+    position: fixed;
+    z-index: 100;
+    top: 100px;
+    height: 400px;
+    display: none;
+}
+
+.itemSelector .heading {
+    background: rgba(21, 9, 90, 0.84);
+    color: #FFF;
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.itemSelector .imageSelector {
+    background: rgba(255, 255, 255, 0.9);
+    height: 100%;
+    overflow: auto;
+}
+
+.itemSelector .imageSelector li {
+    padding: 1px;
+    float: left;
+}
+
+.itemSelector .imageSelector li img {
+    height: 100%;
+    width: 100%;
+}
+
+/*********** Media Queries ****************/
 
 @media (min-width: 768px) {
     
