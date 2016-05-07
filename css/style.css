@@ -17,8 +17,10 @@ body {
 /*    background: rgb(23,0,82);*/
 /*    background: #161675;*/
     background: #4141E4;
+    background-image: url("../img/Wallpapers/paradise-1110498_1280.jpg");
     background-repeat:no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 /*    padding-bottom: 70px; */
 }
 
