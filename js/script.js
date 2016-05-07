@@ -12,6 +12,34 @@ $(function(){
         showWallpaperModal();
     });
     
+    $('#wallpaperModal li').on('click', function(){
+        $('#wallpaperModal li').removeClass('selected');
+        $(this).addClass('selected');
+    });
+    
+    $('.btn_Cancel').on('click', function(){
+        closeModal($(this).closest('.modal'));
+    });
+    
+    $('#btn_ApplyWallpaper').on('click', function(){
+        var imgSrc = $('#wallpaperModal li.selected img').attr('src');
+        //console.log(imgSrc);
+        if(imgSrc != undefined){
+            var bg = 'url(' + imgSrc + ') 0 0 no-repeat cover';
+            $('body').css({
+                'background-image': 'url(' + imgSrc + ')'
+            });
+            $('.mask, #wallpaperModal').hide();
+        }
+    });
+    
+    
+    function closeModal(modalElem) {
+        modalElem.hide();
+        $('.mask').hide();
+    }
+    
+    
     function showWallpaperModal () {
         $('.mask').show();
         

@@ -17,6 +17,8 @@ body {
 /*    background: rgb(23,0,82);*/
 /*    background: #161675;*/
     background: #4141E4;
+    background-repeat:no-repeat;
+    background-size: cover;
 /*    padding-bottom: 70px; */
 }
 
@@ -43,6 +45,19 @@ label {
     background: rgba(255,255,255,.5);
     z-index: 99;
     display: none;
+}
+
+.btn {
+    font-size: 20px;
+    padding: 7px 15px;
+    background: #000;
+    color: #FFF;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgba(0,0,233,.7);
 }
 
 .container-fluid {
@@ -369,8 +384,8 @@ label {
 .itemSelector {
     position: fixed;
     z-index: 100;
-    top: 100px;
-    height: 400px;
+    top: 70px;
+    height: 300px;
     display: none;
 }
 
@@ -389,13 +404,25 @@ label {
 }
 
 .itemSelector .imageSelector li {
-    padding: 1px;
+    padding: 2px;
     float: left;
+}
+
+.itemSelector .imageSelector li.selected,
+.itemSelector .imageSelector li:hover {
+    background: blue;
+    padding: 5px;
 }
 
 .itemSelector .imageSelector li img {
     height: 100%;
     width: 100%;
+}
+
+.itemSelector .panel_Btns {
+    background: rgba(0, 0, 0, 0.86);
+    text-align: right;
+    padding: 7px;
 }
 
 /*********** Media Queries ****************/
