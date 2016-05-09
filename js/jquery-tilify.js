@@ -50,7 +50,7 @@ var tile_plugins = {};
                 enableTileResize();
             }
             
-            function reTilify () {
+            function reTilify () {console.log('inside reTilify');
                 resetGrids();
                 mapTilesToGrid();
                 drawTiles();
@@ -116,10 +116,13 @@ var tile_plugins = {};
             * Once drawTiles has finished preparing the DOM, it will call the loadPlugins
             */
             function loadPlugins () {
+                //console.log('inside loadPlugins');
                 for (var i in tiles) {
                     if(tiles[i].iconType == 'plugin') {
                         var pathToPlugin = 'tile_plugins/' + tiles[i].id + '/index.js';
-                        setTimeout(function(){
+//                        console.log('outside timeout callback '+pathToPlugin);
+//                        setTimeout(function(){
+//                            console.log('inside timeout callback '+pathToPlugin);
                             $.getScript(pathToPlugin, function( data, textStatus, jqxhr ) {
 //                              console.log( data ); // Data returned
 //                              console.log( textStatus ); // Success
@@ -127,7 +130,7 @@ var tile_plugins = {};
 //                              console.log( "Load was performed." );
                                 
                             });
-                        }, 100);
+//                        }, 100);
                     }
                 }
             }
@@ -560,7 +563,7 @@ var tile_plugins = {};
                 }
                 
                 //Initial / first time check, comment this out if first time on/off class is given in html
-                checkTileDNDPermission();
+                //checkTileDNDPermission();
             }
             
             
@@ -586,7 +589,7 @@ var tile_plugins = {};
                 }
                 
                 //Initial / first time check, comment this out if first time on/off class is given in html
-                checkTileResizePermission();
+                //checkTileResizePermission();
                 
                 $('#'+btn_toggleTileResize).on('click', function(){
                     checkTileResizePermission();
