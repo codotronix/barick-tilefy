@@ -1,6 +1,6 @@
 {
     "tileOrder": 
-    ["linkedIn", "stackoverflow", "galaxy", "tileOfTime", "myPictures", "asteroidattack", "miniPuzzle", "facebook", "twitter", "codotronixBlog", "oneMall", "offersplus", "tankgular", "gogoltugo", "github", "myBlog", "bengalirecipes", "reactTaskMan", "txtTile"],
+    ["linkedIn", "stackoverflow", "galaxy", "tileOfTime", "weatherNow", "myPictures", "asteroidattack", "miniPuzzle", "facebook", "twitter", "codotronixBlog", "oneMall", "offersplus", "tankgular", "gogoltugo", "github", "myBlog", "bengalirecipes", "reactTaskMan", "txtTile"],
     
     "tiles": {            
             "galaxy": {
@@ -169,6 +169,14 @@
                 "size": "rectangle",
                 "iconType": "plugin",
                 "bgColor": "rgba(7, 15, 245, 0.44)"
+            },
+            "weatherNow": {
+                "id": "weatherNow",
+                "name": "Weather Now",
+                "size": "rectangle",
+                "iconType": "plugin",
+                "bgColor": "rgba(228, 255, 0, 0.45)",
+                "link": "http://weather.yahoo.com"
             }
     }
 }
