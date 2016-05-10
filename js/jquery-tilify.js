@@ -7,9 +7,9 @@
 */
 
 //So that plugin scripts are cached....
-$.ajaxSetup({
-  cache: true
-});
+//$.ajaxSetup({
+//  cache: true
+//});
 
 var tile_plugins = {};
 
@@ -50,7 +50,7 @@ var tile_plugins = {};
                 enableTileResize();
             }
             
-            function reTilify () {console.log('inside reTilify');
+            function reTilify () {
                 resetGrids();
                 mapTilesToGrid();
                 drawTiles();
@@ -119,20 +119,38 @@ var tile_plugins = {};
                 //console.log('inside loadPlugins');
                 for (var i in tiles) {
                     if(tiles[i].iconType == 'plugin') {
-                        var pathToPlugin = 'tile_plugins/' + tiles[i].id + '/index.js';
+                        
 //                        console.log('outside timeout callback '+pathToPlugin);
 //                        setTimeout(function(){
 //                            console.log('inside timeout callback '+pathToPlugin);
-                            $.getScript(pathToPlugin, function( data, textStatus, jqxhr ) {
-//                              console.log( data ); // Data returned
-//                              console.log( textStatus ); // Success
-//                              console.log( jqxhr.status ); // 200
-//                              console.log( "Load was performed." );
-                                
-                            });
+                        tile_plugins[tiles[i].id] = tile_plugins[tiles[i].id] || {};
+                        
+                        //if the plugin initFunc is available eval it, or load it
+                        if (tile_plugins[tiles[i].id].initFunc) {
+                            eval(tile_plugins[tiles[i].id].initFunc);
+                        } else {
+                            fetchPlugin(tiles[i].id);
+                        }
+                            
 //                        }, 100);
                     }
                 }
+            }
+            
+            
+            /*
+            * Fetch the plugin from server for the first time and save it
+            */
+            function fetchPlugin (tileID) {
+                var pathToPlugin = 'tile_plugins/' + tileID + '/index.js';
+                $.getScript(pathToPlugin, function( data, textStatus, jqxhr ) {
+                    tile_plugins[tileID].initFunc = data;
+//                  console.log( data ); // Data returned
+//                  console.log( textStatus ); // Success
+//                  console.log( jqxhr.status ); // 200
+//                  console.log( "Load was performed." );
+
+                });
             }
             
             
