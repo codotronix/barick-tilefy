@@ -1,5 +1,5 @@
-# jquery-tilify
-Windows metro style tiles with jquery
+# barick-tilify
+A Windows 8.1 Metro Style Responsive Web Plugin
 <br/>
 
 Check it out at <a href="http://codotronix.github.io/jquery-tilify">codotronix.github.io/barick-tilify</a>
