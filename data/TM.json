@@ -107,7 +107,7 @@
                 "iconType": "live",
                 "liveImgUrls": ["img/minipuzzle/360.png", "img/minipuzzle/744x360.png"],
                 "bgColor": "rgba(255,255,255,.2)",
-                "link": "http://codotronix.github.io/sections/apps/minipuzzle/index.html"
+                "link": "http://codotronix.github.io/metro-static/sections/apps/minipuzzle/index.html"
             },
             "gogoltugo": {
                 "id": "gogoltugo",

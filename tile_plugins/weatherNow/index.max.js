@@ -1,12 +1,17 @@
 (function(){
     tile_plugins.weatherNow = tile_plugins.weatherNow || {};
-        
+    var plugin = tile_plugins.weatherNow;
     //the container
     var pluginContainer = $('#weatherNow .plugin');
+    var yahooLogoUrl = "https://poweredby.yahoo.com/white.png";
     
-    tile_plugins.weatherNow.populateTile = function (data) {
-        var temp = data.query.results.channel.item.condition.temp || 35;
-        var yahooLogoUrl = "https://poweredby.yahoo.com/white.png"; //"img/yahooLogo/purple_retina.png";
+    plugin.setTemp = function (data) {
+        plugin.temp = data.query.results.channel.item.condition.temp;
+        populateTile(plugin.temp);        
+    };
+    
+    function populateTile (temp) {
+         //"img/yahooLogo/purple_retina.png";
                 
         var h = '<div style="display:table; color:white; width:100%; height:100%;">'
             +       '<div style="display:table-cell; vertical-align:middle;">'
@@ -19,7 +24,14 @@
         pluginContainer.html(h);
     };
     
-    var scriptQuery = "https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='kolkata, india')&format=json&callback=tile_plugins.weatherNow.populateTile"
     
-    $.getScript(scriptQuery);
+    if (plugin.temp) {
+        populateTile (plugin.temp);
+    } 
+    else {
+        var scriptQuery = "https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='kolkata, india')&format=json&callback=tile_plugins.weatherNow.setTemp"
+    
+        $.getScript(scriptQuery);
+    }    
+    
 })()
