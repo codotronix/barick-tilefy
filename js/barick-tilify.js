@@ -4,21 +4,29 @@
  * Licensed under the MIT license
  */
 
-//So that plugin scripts are cached....
-//$.ajaxSetup({
-//  cache: true
-//});
+
+/*
+*
+* tilify(config) takes the config object, Where,
+*
+* config.TD = (Required) Tile Descriptor JSON, containing tileOrder array and tiles object
+* config.btn_ID_to_Toggle_Tile_Movement = (Optional) id of a button/element to bind the toggle tile move event
+* config.btn_ID_to_Toggle_Tile_Resize = (Optional) id of a button/element to bind the toggle tile resize
+* config.gridCapacityPerRow = (Optional) total number of smallest tile a row should hold
+*
+*/
 
 var tile_plugins = {};
 
-(function($) {    
-    $.fn.tilify = function(TM, btn_toggleTileDnD, btn_toggleTileResize) {
+(function($) {
+    
+    $.fn.tilify = function(config) {
         
         return this.each(function() { //ANONYM FUNC_1 START
             var container = $(this);
             var containerWidth = container.width();
-            var tileOrder = TM.tileOrder,             //The order in which tiles should be drawn
-            tiles = TM.tiles,
+            var tileOrder = config.TD.tileOrder,             //The order in which tiles should be drawn
+            tiles = config.TD.tiles,
             grids = {},                 //grids are smallest square unit of a tile, 1 grid = 1 small tile
             gridsPerRow = 0,            //no of grids in a row
             page_Width_Class = 'xs',    // possible values = xs, sm, md, lg
@@ -253,12 +261,12 @@ var tile_plugins = {};
                 var tiles_Container_width = containerWidth - scrollBarWidth;
                 page_Width_Class = 'xs';
                 var all_Possible_Width_Classes = 'xs sm md lg';        
-                gridsPerRow = 12;
+                gridsPerRow = config.gridCapacityPerRow || 12;
                 small_tile_size = Math.floor(tiles_Container_width / gridsPerRow);        
 
                 if (tiles_Container_width >= 1200) {            
                     page_Width_Class = 'lg';
-                    gridsPerRow = 16;
+                    gridsPerRow = config.gridCapacityPerRow || 16;
                     small_tile_size = Math.floor(tiles_Container_width / gridsPerRow);
                 } 
                 else if (tiles_Container_width >= 992) {
@@ -274,7 +282,7 @@ var tile_plugins = {};
                 }
 
                 medium_tile_size = small_tile_size * 2;
-                big_tile_size = medium_tile_size * 2;
+                big_tile_size = small_tile_size * 4;
             }
 
             /*
@@ -371,7 +379,7 @@ var tile_plugins = {};
                     clearSpaceDivPosition = ((tiles[tileID].top+tiles[tileID].height) > clearSpaceDivPosition) ? (tiles[tileID].top+tiles[tileID].height) : clearSpaceDivPosition; 
                 }
 
-                //TM.clearSpaceDivPosition = clearSpaceDivPosition;
+                //config.TD.clearSpaceDivPosition = clearSpaceDivPosition;
             }
 
             /*
@@ -556,22 +564,22 @@ var tile_plugins = {};
                     });
                 });
                 
-                $('#'+btn_toggleTileDnD).on('click', function(){
+                $('#'+config.btn_ID_to_Toggle_Tile_Movement).on('click', function(){
                     checkTileDNDPermission();
                 });
                 
                 //first tie it doesnot have any of the classes off/on, so it will set to off
                 function checkTileDNDPermission () {
                     $('.tileResizeMenu').remove();
-                    if($('#'+btn_toggleTileDnD).hasClass('off')) {
-                        $('#'+btn_toggleTileDnD).removeClass('off').addClass('on');
+                    if($('#'+config.btn_ID_to_Toggle_Tile_Movement).hasClass('off')) {
+                        $('#'+config.btn_ID_to_Toggle_Tile_Movement).removeClass('off').addClass('on');
                         tileMovementAllowed = true;
                         container.addClass('movementMode').removeClass('resizeMode');
                         //tile resize and movement are mutually exclusive
                         tileResizeAllowed = false;
-                        $('#'+btn_toggleTileResize).removeClass('on').addClass('off');
+                        $('#'+config.btn_ID_to_Toggle_Tile_Resize).removeClass('on').addClass('off');
                     } else {
-                        $('#'+btn_toggleTileDnD).removeClass('on').addClass('off');
+                        $('#'+config.btn_ID_to_Toggle_Tile_Movement).removeClass('on').addClass('off');
                         tileMovementAllowed = false;
                         container.removeClass('movementMode');
                         reTilify(); //to correct any anomaly during tile movement
@@ -584,21 +592,21 @@ var tile_plugins = {};
             
             
             /*
-            * This function enables tile resize, and binds it to btn_toggleTileResize
+            * This function enables tile resize, and binds it to config.btn_ID_to_Toggle_Tile_Resize
             */
             function enableTileResize () {
                 function checkTileResizePermission () {
                     $('.tileResizeMenu').remove();
-                    if($('#'+btn_toggleTileResize).hasClass('off')) {
-                        $('#'+btn_toggleTileResize).removeClass('off').addClass('on');
+                    if($('#'+config.btn_ID_to_Toggle_Tile_Resize).hasClass('off')) {
+                        $('#'+config.btn_ID_to_Toggle_Tile_Resize).removeClass('off').addClass('on');
                         tileResizeAllowed = true;
                         container.addClass('resizeMode').removeClass('movementMode');
                         //tile resize and movement are mutually exclusive
                         tileMovementAllowed = false;
-                        $('#'+btn_toggleTileDnD).removeClass('on').addClass('off');
+                        $('#'+config.btn_ID_to_Toggle_Tile_Movement).removeClass('on').addClass('off');
                         reTilify(); //to correct any anomaly during tile movement
                     } else {
-                        $('#'+btn_toggleTileResize).removeClass('on').addClass('off');
+                        $('#'+config.btn_ID_to_Toggle_Tile_Resize).removeClass('on').addClass('off');
                         tileResizeAllowed = false;
                         container.removeClass('resizeMode');
                     }
@@ -607,7 +615,7 @@ var tile_plugins = {};
                 //Initial / first time check, comment this out if first time on/off class is given in html
                 //checkTileResizePermission();
                 
-                $('#'+btn_toggleTileResize).on('click', function(){
+                $('#'+config.btn_ID_to_Toggle_Tile_Resize).on('click', function(){
                     checkTileResizePermission();
                 });
                 

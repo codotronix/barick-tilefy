@@ -44,7 +44,7 @@
                 "name": "Hello Guest!",
                 "size": "rectangle",
                 "iconType": "live",
-                "liveTxts": ["Hi! I am Suman Barick and I love to Code", "This is the jQuery version of this site", "This site also has an AngularJS version at barick.in", "This site is inspired by Windows Metro Style"],
+                "liveTxts": ["Hi! I am Suman Barick and I love to Code", "I made this plugin \"barick-tilify\"", "Like it? Star \"barick-tilify\" repo on github", "I have made this plugin Open Source", "I'll soon make the documentation"],
                 "fontColor": "#E4F978",
                 "bgColor": "rgba(255,255,255,.3)"
             },
