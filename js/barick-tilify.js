@@ -1,10 +1,8 @@
-/*
-* Author: Suman Barick - All rights reserved
-* usage: $('#tileContainer').tilify(TM)
-* TM is a json object that conatins
-* 1. tile order array, an array of id of each tile in order of their appearance
-* 2. object of tile Objects
-*/
+/*!
+ * barick-tilify v1.0.0 (https://github.com/codotronix/barick-tilify)
+ * Copyright 2016 Suman Barick
+ * Licensed under the MIT license
+ */
 
 //So that plugin scripts are cached....
 //$.ajaxSetup({
