@@ -1,0 +1,111 @@
+{
+    "tileOrder": 
+    ["id1", "id9", "id10", "id11", "id5","id4", "id8", "id3", "id2", "id6", "id7", "id12"],
+    
+    "tiles": {
+            "id1": {
+                "id": "id1",
+                "name": "Piper",
+                "size": "medium",
+                "iconType": "font",
+                "icon": "fa fa-graduation-cap",
+                "bgColor":"rgba(59, 89, 152, 0.7)"
+            },
+            "id2": {
+                "id": "id2",
+                "name": "My Cloud",
+                "size": "small",
+                "iconType": "font",
+                "icon": "fa fa-users",
+                "bgColor": "rgba(139, 120, 0, 0.7)"
+            },
+            "id3": {
+                "id": "id3",
+                "name": "See Further",
+                "size": "rectangle",
+                "iconType": "font",
+                "icon": "fa fa-film",
+                "bgColor": "rgba(142, 40, 140, 0.69)"
+            },
+            "id4": {
+                "id": "id4",
+                "name": "Book Cab",
+                "size": "small",
+                "iconType": "font",
+                "icon": "fa fa-file-pdf-o",
+                "bgColor": "rgba(64, 153, 255, 0.7)",
+                "link": "#"
+            },
+            "id5": {
+                "id": "id5",
+                "name": "Bell Reminder",
+                "size": "rectangle",
+                "iconType": "font",
+                "icon": "fa fa-fax",
+                "bgColor": "rgba(20, 253, 37, 0.7)",
+                "link": "#"
+            },
+            "id6": {
+                "id": "id6",
+                "name": "Bomber",
+                "size": "small",
+                "iconType": "font",
+                "icon": "fa fa-coffee",
+                "bgColor": "rgba(220, 53, 37, 0.7)",
+                "link": "#"
+            },
+            "id7": {
+                "id": "id7",
+                "name": "CHAT",
+                "size": "small",
+                "iconType": "font",
+                "icon": "fa fa-cloud-download",
+                "bgColor": "rgba(220, 253, 137, 0.7)",
+                "link": "#"
+            },        
+            "id8": {
+                "id": "id8",
+                "name": "Bullseye",
+                "size": "big",
+                "iconType": "font",
+                "icon": "fa fa-heartbeat",
+                "bgColor": "rgba(255, 0, 0, 0.9)"
+            },
+            "id9": {
+                "id": "id9",
+                "name": "CHAT",
+                "size": "medium",
+                "iconType": "font",
+                "icon": "fa fa-university",
+                "bgColor": "rgba(220, 3, 237, 0.7)",
+                "link": "#"
+            },
+            "id10": {
+                "id": "id10",
+                "name": "CHAT",
+                "size": "small",
+                "iconType": "font",
+                "icon": "fa fa-hourglass-half",
+                "bgColor": "rgba(220, 253, 137, 0.7)",
+                "link": "#"
+            },
+            "id11": {
+                "id": "id11",
+                "name": "CHAT",
+                "size": "medium",
+                "iconType": "font",
+                "icon": "fa fa-home",
+                "bgColor": "rgba(220, 253, 137, 0.7)",
+                "link": "#"
+            },
+            "id12": {
+                "id": "id12",
+                "name": "CHAT",
+                "size": "small",
+                "iconType": "font",
+                "icon": "fa fa-paint-brush",
+                "bgColor": "rgba(67, 45, 156, 0.86)",
+                "link": "#"
+            }
+    }
+}
