@@ -6,8 +6,8 @@ $(function(){
         config.btn_ID_to_Toggle_Tile_Resize = 'btn_toggleTileResize';
         //config.gridCapacityPerRow = 20;   //let's comment it out, becoz it's optional      
         
-        $('#tilesContainer').tilify(config);
-        //$('#tilesContainer').tilify(res, 'btn_toggleTileDnD', 'btn_toggleTileResize');
+        $('#tilesContainer').tilefy(config);
+        //$('#tilesContainer').tilefy(res, 'btn_toggleTileDnD', 'btn_toggleTileResize');
     });
     
     $('#startBtn').click(function(ev){

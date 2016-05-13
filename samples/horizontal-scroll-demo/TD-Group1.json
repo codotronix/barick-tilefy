@@ -1,6 +1,6 @@
 {
     "tileOrder": 
-    ["linkedIn", "stackoverflow", "facebook", "twitter", "github", "eMail"],
+    ["linkedIn", "stackoverflow", "facebook", "twitter", "whatsapp", "github", "eMail", "gplus"],
     
     "tiles": {
             "github": {
@@ -47,6 +47,15 @@
                 "bgColor": "rgba(64, 153, 255, 0.7)",
                 "link": "https://twitter.com/codotronix"
             },
+            "whatsapp": {
+                "id": "whatsapp",
+                "name": "Whatsapp",
+                "size": "medium",
+                "iconType": "font",
+                "icon": "fa fa-whatsapp",
+                "bgColor": "rgba(228, 25, 25, 0.87)",
+                "link": "http://www.google.com?suman-barick"
+            },
             "eMail": {
                 "id": "eMail",
                 "name": "EMAIL",
@@ -55,6 +64,15 @@
                 "icon": "fa fa-envelope",
                 "bgColor": "rgba(220, 253, 37, 0.7)",
                 "link": "mailto:codotronix@gmail.com"
+            },
+            "gplus": {
+                "id": "gplus",
+                "name": "EMAIL",
+                "size": "medium",
+                "iconType": "font",
+                "icon": "fa fa-google-plus",
+                "bgColor": "rgb(247, 0, 0)",
+                "link": "http://www.google.com?suman-barick"
             }
     }
 }

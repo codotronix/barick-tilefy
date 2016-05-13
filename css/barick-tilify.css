@@ -11,33 +11,6 @@
     box-sizing: border-box;
 }
 
-.toggleBtn {
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    border: 2px solid darkgray;
-/*    background: gray;*/
-/*    border-radius: 50%;*/
-    position: absolute;
-    right: 15px;
-    top: 5px;
-}
-
-.toggleBtn span {
-    position: absolute;
-    display: inline-block;
-    top: 1px;
-    bottom: 1px;
-    left: 1px;
-    right: 1px;
-    background: orangered;
-/*    border-radius: 50%;*/
-}
-
-.off>.toggleBtn span {
-    display: none;
-}
-
 .barick-tiles-container {
     margin: 20px 0;
     position: relative;
@@ -156,6 +129,27 @@
     display: inline-block;
 }
 
+.tileResizeMenu {
+    text-align: left;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #FFF;
+    color: #111;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.tileResizeMenu li {
+    padding: 3px 15px;
+}
+
+.tileResizeMenu li:hover {
+    background: #5A2FAD;
+    color: #FFF;    
+}
+
 .xs .tile {
     padding: 2.5px;
 }
@@ -193,6 +187,14 @@
 .tile .fontImg {
     height: 100%;
     width: 100%;
+}
+
+.shift-effect {
+    margin: 7px;
+}
+
+.drag-effect {
+    z-index: 111 !important;
 }
 
 /************* Animation Keyframes ******************/

@@ -1,42 +1,42 @@
 {
     "tileOrder": 
-    ["id1", "id4", "id5", "id3", "id2", "id6", "id8", "id7"],
+    ["id10", "id40", "id50", "id30", "id20", "id60", "id80", "id70"],
     
     "tiles": {
-            "id8": {
-                "id": "id8",
+            "id80": {
+                "id": "id80",
                 "name": "Bullseye",
                 "size": "medium",
                 "iconType": "font",
                 "icon": "fa fa-bullseye",
                 "bgColor": "rgba(90, 25, 25, 0.71)"
             },
-            "id1": {
-                "id": "id1",
+            "id10": {
+                "id": "id10",
                 "name": "Piper",
                 "size": "medium",
                 "iconType": "font",
                 "icon": "fa fa-pied-piper",
                 "bgColor":"rgba(59, 89, 152, 0.7)"
             },
-            "id2": {
-                "id": "id2",
+            "id20": {
+                "id": "id20",
                 "name": "My Cloud",
                 "size": "medium",
                 "iconType": "font",
                 "icon": "fa fa-cloud-upload",
                 "bgColor": "rgba(139, 120, 0, 0.7)"
             },
-            "id3": {
-                "id": "id3",
+            "id30": {
+                "id": "id30",
                 "name": "See Further",
                 "size": "medium",
                 "iconType": "font",
                 "icon": "fa fa-binoculars",
                 "bgColor": "rgba(142, 40, 140, 0.69)"
             },
-            "id5": {
-                "id": "id5",
+            "id50": {
+                "id": "id50",
                 "name": "Book Cab",
                 "size": "rectangle",
                 "iconType": "font",
@@ -44,8 +44,8 @@
                 "bgColor": "rgba(64, 153, 255, 0.7)",
                 "link": "#"
             },
-            "id4": {
-                "id": "id4",
+            "id40": {
+                "id": "id40",
                 "name": "Bell Reminder",
                 "size": "rectangle",
                 "iconType": "font",
@@ -53,8 +53,8 @@
                 "bgColor": "rgba(20, 253, 37, 0.7)",
                 "link": "#"
             },
-            "id6": {
-                "id": "id6",
+            "id60": {
+                "id": "id60",
                 "name": "Bomber",
                 "size": "rectangle",
                 "iconType": "font",
@@ -62,8 +62,8 @@
                 "bgColor": "rgba(220, 53, 37, 0.7)",
                 "link": "#"
             },
-            "id7": {
-                "id": "id7",
+            "id70": {
+                "id": "id70",
                 "name": "CHAT",
                 "size": "rectangle",
                 "iconType": "font",
