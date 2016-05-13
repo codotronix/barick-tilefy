@@ -1,5 +1,7 @@
 # barick-tilefy
-A Windows 8.1 Metro Style Responsive Web Plugin
+A Windows 8.1 Metro Style Responsive Web Plugin 
+
+[**Please Note: It is currently Responsive on Page load/Reload i.e. Any change in viewport width needs the page to be refreshed**]
 
 <br/>
 
@@ -26,8 +28,8 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 <br/>
 
 ## Demos and Samples
-* [Vertical Scrollable Tiles Demo](http://barick.in)
-* [Horizontally Scrollable Grouped Tiles Demo](http://codotronix.github.io/barick-tilefy/samples/horizontal-scroll-demo/)
+* [Vertical Scrollable Tiles Demo - Responsive on Reload](http://barick.in)
+* [Horizontally Scrollable Grouped Tiles Demo - Not Responsive](http://codotronix.github.io/barick-tilefy/samples/horizontal-scroll-demo/)
 
 <br/>
 
