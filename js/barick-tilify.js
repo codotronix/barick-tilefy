@@ -46,7 +46,7 @@ var tile_plugins = {};
             
             function init () {
                 calculateWidths();
-                noBigTileInXS();
+                //noBigTileInXS();
                 makeGrids();        
                 mapTilesToGrid();
                 drawTiles();
@@ -69,7 +69,7 @@ var tile_plugins = {};
             */
             function drawTiles () {
                 var htm = '';
-                container.addClass('tiles-container ' + page_Width_Class);
+                container.addClass('barick-tiles-container ' + page_Width_Class);
                 var tile;
                 for(var i in tiles) {
                     tile = tiles[i];
@@ -271,13 +271,15 @@ var tile_plugins = {};
                 } 
                 else if (tiles_Container_width >= 992) {
                     page_Width_Class = 'md';
+                    gridsPerRow = config.gridCapacityPerRow || 12;
                 } 
                 else if (tiles_Container_width >= 768) {
-                    page_Width_Class = 'sm';            
+                    page_Width_Class = 'sm';
+                    gridsPerRow = config.gridCapacityPerRow || 12;
                 } 
                 else {
                     page_Width_Class = 'xs';   
-                    gridsPerRow = 4;
+                    gridsPerRow = config.gridCapacityPerRow || 4;
                     small_tile_size = Math.floor((tiles_Container_width + scrollBarWidth) / gridsPerRow);
                 }
 

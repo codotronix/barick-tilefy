@@ -8,7 +8,7 @@ $(function(){
         
         $('#tilesContainer').tilify(config);
         //$('#tilesContainer').tilify(res, 'btn_toggleTileDnD', 'btn_toggleTileResize');
-    })
+    });
     
     $('#startBtn').click(function(ev){
         ev.stopPropagation();

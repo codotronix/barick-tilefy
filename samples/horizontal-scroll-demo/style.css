@@ -1,0 +1,42 @@
+body {
+    background-image: url("../../img/Wallpapers/dock-1030837_1280.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+/*    background: blue;*/
+    color: #FFF;
+    width: 2040px;
+}
+
+.pageHeader {
+    padding: 0 30px;
+}
+
+.group {
+    position: absolute;
+/*    border: 1px solid #FFF;*/
+    width: 600px;
+    height: 600px;
+    overflow: auto;
+    display: inline-block;
+}
+
+.groupTitle {
+    margin: 10px;
+    color: #3C52A9;
+}
+
+#sec1 {
+    left: 40px;
+}
+
+#sec2 {
+    left: 700px;
+}
+
+#sec3 {
+    left: 1380px;
+}
+
+
+

@@ -1,0 +1,60 @@
+{
+    "tileOrder": 
+    ["linkedIn", "stackoverflow", "facebook", "twitter", "github", "eMail"],
+    
+    "tiles": {
+            "github": {
+                "id": "github",
+                "name": "Github",
+                "size": "medium",
+                "iconType": "font",
+                "icon": "fa fa-github",
+                "bgColor": "rgba(10, 82, 49, 0.7)"
+            },
+            "facebook": {
+                "id": "facebook",
+                "name": "Facebook",
+                "size": "medium",
+                "iconType": "font",
+                "icon": "fa fa-facebook-square",
+                "bgColor":"rgba(59, 89, 152, 0.7)",
+                "link":"http://facebook.com/codotronix"
+            },
+            "linkedIn": {
+                "id": "linkedIn",
+                "name": "linkedin",
+                "size": "medium",
+                "iconType": "font",
+                "icon": "fa fa-linkedin-square",
+                "bgColor": "rgba(139, 0, 0, 0.7)",
+                "link": "https://in.linkedin.com/in/sumanbarick"
+            },
+            "stackoverflow": {
+                "id": "stackoverflow",
+                "name": "Stack Overflow",
+                "size": "medium",
+                "iconType": "font",
+                "icon": "fa fa-stack-overflow",
+                "bgColor": "rgba(142, 140, 140, 0.69)",
+                "link": "http://stackoverflow.com/users/5017556/suman-barick"
+            },
+            "twitter": {
+                "id": "twitter",
+                "name": "twitter",
+                "size": "rectangle",
+                "iconType": "font",
+                "icon": "fa fa-twitter",
+                "bgColor": "rgba(64, 153, 255, 0.7)",
+                "link": "https://twitter.com/codotronix"
+            },
+            "eMail": {
+                "id": "eMail",
+                "name": "EMAIL",
+                "size": "rectangle",
+                "iconType": "font",
+                "icon": "fa fa-envelope",
+                "bgColor": "rgba(220, 253, 37, 0.7)",
+                "link": "mailto:codotronix@gmail.com"
+            }
+    }
+}
