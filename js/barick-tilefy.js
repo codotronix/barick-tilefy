@@ -1,5 +1,5 @@
 /*!
- * barick-tilify v1.0.0 (https://github.com/codotronix/barick-tilify)
+ * barick-tilefy v1.0.0 (https://github.com/codotronix/barick-tilefy)
  * Copyright 2016 Suman Barick
  * Licensed under the MIT license
  */
@@ -7,7 +7,7 @@
 
 /*
 *
-* tilify(config) takes the config object, Where,
+* tilefy(config) takes the config object, Where,
 *
 * config.TD = (Required) Tile Descriptor JSON, containing tileOrder array and tiles object
 * config.btn_ID_to_Toggle_Tile_Movement = (Optional) id of a button/element to bind the toggle tile move event
@@ -20,9 +20,10 @@ var tile_plugins = {};
 
 (function($) {
     
-    $.fn.tilify = function(config) {
+    $.fn.tilefy = function(config) {
         
         return this.each(function() { //ANONYM FUNC_1 START
+        var thisContainer = this;
             var container = $(this);
             var containerWidth = container.width();
             var tileOrder = config.TD.tileOrder,             //The order in which tiles should be drawn
@@ -56,7 +57,7 @@ var tile_plugins = {};
                 enableTileResize();
             }
             
-            function reTilify () {
+            function reTilefy () {
                 resetGrids();
                 mapTilesToGrid();
                 drawTiles();
@@ -65,7 +66,7 @@ var tile_plugins = {};
             
             
             /*
-            * This function will make the Full HTML and put them in container on which tilify was called
+            * This function will make the Full HTML and put them in container on which tilefy was called
             */
             function drawTiles () {
                 var htm = '';
@@ -110,7 +111,7 @@ var tile_plugins = {};
                 }
                 
                 //add the clearSpaceDiv
-                htm += '<div style="position:absolute; left: 10px; right: 10px; height: 80px; top: ' +(clearSpaceDivPosition + 50) + 'px" ></div>';
+                htm += '<div style="position:absolute; left: 10px; right: 10px; height: 60px; top: ' +(clearSpaceDivPosition) + 'px" ></div>';
                 
                 container.html(htm);
                 
@@ -377,7 +378,7 @@ var tile_plugins = {};
                     tiles[tileID].bgColor = tiles[tileID].bgColor || colorCodes[Math.floor(Math.random()*colorCodes.length)];
                     tiles[tileID].top = grids[gridId].top;
                     tiles[tileID].left = grids[gridId].left;
-
+                    //console.log('top='+tiles[tileID].top+" ... height="+tiles[tileID].height+" total="+(tiles[tileID].top+tiles[tileID].height));
                     clearSpaceDivPosition = ((tiles[tileID].top+tiles[tileID].height) > clearSpaceDivPosition) ? (tiles[tileID].top+tiles[tileID].height) : clearSpaceDivPosition; 
                 }
 
@@ -476,7 +477,8 @@ var tile_plugins = {};
                 
                 
                 //whenever a tile recieves a mousedown, assume dragging start
-                $('body').on('pointerdown', '.movementMode .tile', function(ev){ //console.log('drag start');console.log(ev);
+                container.on('pointerdown', '.tile', function(ev){ //console.log('drag start');console.log(ev);
+                    if(!container.hasClass('movementMode')) {return;}
 //                    ev.stopPropagation();
                     ev.preventDefault();
                     if(drag_in_progress) {return;}
@@ -485,7 +487,7 @@ var tile_plugins = {};
                     drag_in_progress = true;
                     iniMX = ev.pageX;
                     iniMY = ev.pageY;
-                    $('.tile').removeClass('being-dragged');
+                    container.find('.tile').removeClass('being-dragged');
                     $(this).addClass('being-dragged');
                 });
                 
@@ -524,11 +526,16 @@ var tile_plugins = {};
                         }                        
                     }
                     
-                    reTilify();                    
+                    reTilefy();                    
                     
                     tile_Being_Dragged_ID = null;
                     tile_to_be_shifted_ID = null;
                     $('.tile').removeClass('being-dragged');
+                });
+                
+                //if the pointer goes out of current tile container, trigger a pointerup
+                container.on('pointerout', function(ev) {
+                   $('body').trigger('pointerup');
                 });
                 
                 //while dragging the tile should move with mouse
@@ -552,7 +559,7 @@ var tile_plugins = {};
                     for (var i in tiles) {
                         if(tile_Being_Dragged_ID != tiles[i].id && Math.abs(tiles[i].left - tileLeft) < small_tile_size && Math.abs(tiles[i].top - tileTop) < small_tile_size) {
                             //console.log(tiles[i].id + " can be moved...");
-                            $('.tile').removeClass('shift-effect');
+                            container.find('.tile').removeClass('shift-effect');
                             tile_to_be_shifted_ID = tiles[i].id;
                             $('#' + tile_to_be_shifted_ID).addClass('shift-effect');
                             break;
@@ -573,7 +580,7 @@ var tile_plugins = {};
                 //first tie it doesnot have any of the classes off/on, so it will set to off
                 function checkTileDNDPermission () {
                     $('.tileResizeMenu').remove();
-                    if($('#'+config.btn_ID_to_Toggle_Tile_Movement).hasClass('off')) {
+                    if(!$('#'+config.btn_ID_to_Toggle_Tile_Movement).hasClass('on')) {
                         $('#'+config.btn_ID_to_Toggle_Tile_Movement).removeClass('off').addClass('on');
                         tileMovementAllowed = true;
                         container.addClass('movementMode').removeClass('resizeMode');
@@ -584,7 +591,7 @@ var tile_plugins = {};
                         $('#'+config.btn_ID_to_Toggle_Tile_Movement).removeClass('on').addClass('off');
                         tileMovementAllowed = false;
                         container.removeClass('movementMode');
-                        reTilify(); //to correct any anomaly during tile movement
+                        reTilefy(); //to correct any anomaly during tile movement
                     }
                 }
                 
@@ -599,14 +606,14 @@ var tile_plugins = {};
             function enableTileResize () {
                 function checkTileResizePermission () {
                     $('.tileResizeMenu').remove();
-                    if($('#'+config.btn_ID_to_Toggle_Tile_Resize).hasClass('off')) {
+                    if(!$('#'+config.btn_ID_to_Toggle_Tile_Resize).hasClass('on')) {
                         $('#'+config.btn_ID_to_Toggle_Tile_Resize).removeClass('off').addClass('on');
                         tileResizeAllowed = true;
                         container.addClass('resizeMode').removeClass('movementMode');
                         //tile resize and movement are mutually exclusive
                         tileMovementAllowed = false;
                         $('#'+config.btn_ID_to_Toggle_Tile_Movement).removeClass('on').addClass('off');
-                        reTilify(); //to correct any anomaly during tile movement
+                        reTilefy(); //to correct any anomaly during tile movement
                     } else {
                         $('#'+config.btn_ID_to_Toggle_Tile_Resize).removeClass('on').addClass('off');
                         tileResizeAllowed = false;
@@ -630,7 +637,8 @@ var tile_plugins = {};
                                     +'</ul>';
                 
                 //click on tile to open resize menu
-                $('body').on('click', '.resizeMode .tile', function(ev){
+                container.on('click', '.tile', function(ev){
+                    if(!container.hasClass('resizeMode')) {return;}
                     $('.tileResizeMenu').remove();
                     var top = parseInt($(this).css('top')) + 20;
                     var left = parseInt($(this).css('left')) + 20;
@@ -643,14 +651,14 @@ var tile_plugins = {};
                 
                 
                 //click on a size to resize tile
-                $('body').on('click', '.tileResizeMenu li', function (ev) {
+                container.on('click', '.tileResizeMenu li', function (ev) {
                     var chosenSize = $(this).text().toLowerCase();
                     var tileID = $(this).closest('.tileResizeMenu').attr('data-tileID');
                     
                     //resize only if a different size is chosen
                     if(tiles[tileID].size != chosenSize) {
                         tiles[tileID].size = chosenSize;
-                        reTilify();
+                        reTilefy();
                     }
                 });
                 
@@ -668,5 +676,5 @@ var tile_plugins = {};
             
             
         }); //ANONYM FUNC_1 END
-    }   //END OF TILIFY
+    }   //END OF Tilefy
 }(jQuery));

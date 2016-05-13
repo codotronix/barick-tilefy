@@ -5,7 +5,7 @@
     "tiles": {
             "id1": {
                 "id": "id1",
-                "name": "Piper",
+                "name": "Learn",
                 "size": "medium",
                 "iconType": "font",
                 "icon": "fa fa-graduation-cap",
@@ -13,7 +13,7 @@
             },
             "id2": {
                 "id": "id2",
-                "name": "My Cloud",
+                "name": "Friends",
                 "size": "small",
                 "iconType": "font",
                 "icon": "fa fa-users",
@@ -21,7 +21,7 @@
             },
             "id3": {
                 "id": "id3",
-                "name": "See Further",
+                "name": "Movies",
                 "size": "rectangle",
                 "iconType": "font",
                 "icon": "fa fa-film",
@@ -29,7 +29,7 @@
             },
             "id4": {
                 "id": "id4",
-                "name": "Book Cab",
+                "name": "eBooks",
                 "size": "small",
                 "iconType": "font",
                 "icon": "fa fa-file-pdf-o",
@@ -38,7 +38,7 @@
             },
             "id5": {
                 "id": "id5",
-                "name": "Bell Reminder",
+                "name": "Fax",
                 "size": "rectangle",
                 "iconType": "font",
                 "icon": "fa fa-fax",
@@ -47,7 +47,7 @@
             },
             "id6": {
                 "id": "id6",
-                "name": "Bomber",
+                "name": "Coffee Break",
                 "size": "small",
                 "iconType": "font",
                 "icon": "fa fa-coffee",
@@ -56,7 +56,7 @@
             },
             "id7": {
                 "id": "id7",
-                "name": "CHAT",
+                "name": "Download Manager",
                 "size": "small",
                 "iconType": "font",
                 "icon": "fa fa-cloud-download",
@@ -65,7 +65,7 @@
             },        
             "id8": {
                 "id": "id8",
-                "name": "Bullseye",
+                "name": "Medical App",
                 "size": "big",
                 "iconType": "font",
                 "icon": "fa fa-heartbeat",
@@ -73,7 +73,7 @@
             },
             "id9": {
                 "id": "id9",
-                "name": "CHAT",
+                "name": "Open University",
                 "size": "medium",
                 "iconType": "font",
                 "icon": "fa fa-university",
@@ -82,7 +82,7 @@
             },
             "id10": {
                 "id": "id10",
-                "name": "CHAT",
+                "name": "Time Rhyme",
                 "size": "small",
                 "iconType": "font",
                 "icon": "fa fa-hourglass-half",
@@ -91,7 +91,7 @@
             },
             "id11": {
                 "id": "id11",
-                "name": "CHAT",
+                "name": "Home",
                 "size": "medium",
                 "iconType": "font",
                 "icon": "fa fa-home",
@@ -100,7 +100,7 @@
             },
             "id12": {
                 "id": "id12",
-                "name": "CHAT",
+                "name": "Paint",
                 "size": "small",
                 "iconType": "font",
                 "icon": "fa fa-paint-brush",
