@@ -1,6 +1,6 @@
 {
     "tileOrder": 
-    ["linkedIn", "stackoverflow", "galaxy", "tileOfTime", "weatherNow", "myPictures", "asteroidattack", "miniPuzzle", "facebook", "twitter", "codotronixBlog", "oneMall", "offersplus", "tankgular", "gogoltugo", "github", "myBlog", "bengalirecipes", "reactTaskMan", "txtTile"],
+    ["linkedIn", "stackoverflow", "galaxy", "tileOfTime", "weatherNow", "myPictures", "barickTilify", "asteroidattack", "miniPuzzle", "facebook", "twitter", "codotronixBlog", "oneMall", "offersplus", "tankgular", "gogoltugo", "myBlog", "github", "bengalirecipes", "reactTaskMan", "txtTile"],
     
     "tiles": {            
             "galaxy": {
@@ -126,6 +126,15 @@
                 "liveImgUrls": ["img/tankgular/tankgular.png"],
                 "bgColor": "rgba(255,255,255,.2)",
                 "link": "http://codotronix.github.io/Tankgular/"
+            },
+            "barickTilify": {
+                "id": "barickTilify",
+                "name": "barick-tilefy",
+                "size": "rectangle",
+                "iconType": "live",
+                "liveImgUrls": ["img/screens/RepositionTiles.gif"],
+                "bgColor": "rgba(255,255,255,.2)",
+                "link": "https://github.com/codotronix/barick-tilefy"
             },
             "asteroidattack": {
                 "id": "asteroidattack",
