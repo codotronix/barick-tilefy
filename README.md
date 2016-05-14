@@ -10,7 +10,8 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 * [Quick Highlight](#quick-highlight)
 * [Demos and Samples](#demos-and-samples)
 * [Dependencies](#dependencies)
-* [How To Use](#how-to-use)
+* [Get Started](#get-started)
+* [Different Types of Tiles](#different-types-of-tiles)
 * [Contacts](#contacts)
 * [Showcase Your Website](#showcase-your-website)
 * [Support This Development](#support-this-development)
@@ -46,7 +47,7 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 
 
 
-## How To Use
+## Get Started
 
 * **Include Tilefy js and css files** <br/>
   Put these two lines in the `<head>` section of your page
@@ -73,7 +74,7 @@ A Windows 8.1 Metro Style Responsive Web Plugin
             "id": "id1",
             "name": "Learn",
             "size": "medium",
-            "iconType": "font",
+            "contentType": "font",
             "icon": "fa fa-graduation-cap",
             "bgColor":"rgba(59, 89, 152, 0.7)"
         },
@@ -81,7 +82,7 @@ A Windows 8.1 Metro Style Responsive Web Plugin
             "id": "id2",
             "name": "Friends",
             "size": "small",
-            "iconType": "font",
+            "contentType": "font",
             "icon": "fa fa-users",
             "bgColor": "rgba(139, 120, 0, 0.7)"
         },
@@ -89,7 +90,7 @@ A Windows 8.1 Metro Style Responsive Web Plugin
             "id": "id3",
             "name": "Movies",
             "size": "rectangle",
-            "iconType": "font",
+            "contentType": "font",
             "icon": "fa fa-film",
             "bgColor": "rgba(142, 40, 140, 0.69)"
         }
@@ -129,6 +130,74 @@ $('#ID_of_Your_Container_Div').tilefy(config);
 ```
 
 
+## Different Types of Tiles
+  There are different types of tiles that you might want to show in your page and all of those can be congigured in your TD (Tile Descriptor).
+  1. Static Tile with an Icon at its center
+  2. Static Tile that shows only 1 Image
+  3. Static Tile that shows only A Fixed Text
+  4. Live Tile that shows Multiple images
+  5. Live Tile that shows Multiple Texts
+  6. Live Tile that shows Multiple Texts and Images
+  7. Live Tile that is Entirely An Application (Plugin) itself with Infinite Possibilities
+  
+We achieve different tile types by changing the `contentType` property when we define a file. And possible values for `contentType` can be `font, live and plugin`
+
+* **Static Tile with an Icon at its center**
+
+_"contentType": "font"_
+
+Now, to achieve *Tile Type 1*, we can define the tile like this, say we define a "Twitter Tile"
+
+```
+"twitter": {
+                "id": "twitter",          // THIS ID and This JSON's objects key should always be same, for all kind of tiles
+                "name": "twitter",        // A name to show users
+                "size": "small",          // can be Small / Medium / Big / Rectangle
+                "contentType": "font",    // This is IMPORTANT, it defines the Type of Tile it is going to be
+                "icon": "fa fa-twitter",  // The Font Awesome Icon Class to be displayed
+                "bgColor": "rgba(64, 153, 255, 0.7)",       // The Background Color of the Tile
+                "link": "https://twitter.com/codotronix"    // Link to your Twitter
+            }
+```
+   
+  <br/> 
+   
+  * **Static Tile that shows only 1 Image**
+  * **Static Tile that shows only A Fixed Text**
+  * **Live Tile that shows Multiple images**
+  * **Live Tile that shows Multiple Texts**
+  * **Live Tile that shows Multiple Texts and Images**
+  
+
+    _"contentType": "live"_
+
+
+For tile type 2 to 6, the `contentType` should be `live`. Let's see it with an example of, say, "myPictures" tile definition (see comments below),
+```
+"myPictures": {
+                "id": "myPictures",
+                "name": "My Pictures",
+                "size": "big",
+                "contentType": "live",
+                "liveImgUrls": ["img/myPictures/1.jpg", "img/myPictures/3.jpg", "img/myPictures/4.jpg"],  //Optional, 1 image for fixed tile, more than 1 image for live image tile
+                "liveTxts": ["Welcome to my Website", "Follow me at Twitter @codotronix"],                //Optional, if array size 1, then fixed, if array size > 1, then texts will be changing in certain interval
+                "fontColor": "ivory",
+                "bgColor": "rgba(255,255,255,.2)"
+```
+    
+So, the idea is, if the `contentType` is `live`, then if `liveImgUrls` array contains 1 element then the tile will show only that image, but if the array size > 1, then they will be shown one by one. Same goes for the `liveTxts` array. Omit any of `liveImgUrls` or `liveTxts` array to make the tile of live text type or live image type accordingly.
+
+<br/>
+
+
+* **Live Tile that is Entirely An Application (Plugin) itself with Infinite Possibilities**
+
+  _"contentType": "plugin"_
+
+_Documentation Coming in Next 5 hours_
+
+
+<br/>
 
 ## Showcase Your Website
 I would love to see how you are using this plugin. So, if you build something cool using this plugin and don't mind showing it off to the world, just contact me know in any of the following ways and I will showcase your site in my site.
