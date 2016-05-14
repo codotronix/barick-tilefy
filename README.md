@@ -19,11 +19,16 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 
 ## Quick Highlight
 
-#### Drag to Move / Reposition Tiles
-![Drag to Move / Reposition Tiles](img/help-gifs/RepositionTiles.gif)
+<div class="sideBySide" style="width:50%; float:left">
+  <h2>Drag to Move / Reposition Tiles</h2>
+  <img src="img/help-gifs/RepositionTiles.gif" alt="Drag to Move / Reposition Tiles" />
+</div>
 
-#### Resize Tiles [4 sizes - Small, Medium, Big, Rectangle]
-![Resize Tiles into any of the 4 available sizes](img/help-gifs/ResizeTiles.gif)
+<div class="sideBySide" style="width:50%; float:left">
+  <h2>Resize Tiles [4 sizes - Small, Medium, Big, Rectangle]</h2>
+  <img src="img/help-gifs/ResizeTiles.gif" alt="Resize Tiles into any of the 4 available sizes" />
+</div>
+
 
 <br/>
 
