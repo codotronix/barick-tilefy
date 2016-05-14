@@ -99,6 +99,7 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 ```
 
 
+
 * **Make a "config" Object** <br/>
   A "config" object contains various configuration options, regarding various operations on tile. A sample "config" object would be like this
 
@@ -114,7 +115,9 @@ A Windows 8.1 Metro Style Responsive Web Plugin
   2. `config.btn_ID_to_Toggle_Tile_Movement`: (Optional) Provide the ID of the html element which you want user to use to toggle Tile Movement / Reposition functionality ON and OFF.
   3. `config.btn_ID_to_Toggle_Tile_Resize`: (Optional) Same as no. 2 but for Tile Resize functionality.
   4. `config.gridCapacityPerRow`: (Optional) This is a powerful configuration option. By this you can define the total number of grids (Small Tile) that can be placed in a row. The more the number the smaller will the size of tiles will be.
-  **[Remember 1 grid = 1 Small Tile. So, Medium Tiles are 2x2 i.e 4 grids are required to place a small tile. Big Tiles are 4 grids wide and 4 grids high, so 4x4=16 grids are required to place a Big Tile.]**
+  *[Remember 1 grid = 1 Small Tile. So, Medium Tiles are 2x2 i.e 4 grids are required to place a small tile. Big Tiles are 4 grids wide and 4 grids high, so 4x4=16 grids are required to place a Big Tile.]*
+
+
 
 
 
