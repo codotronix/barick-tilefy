@@ -7,7 +7,7 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 
 ## Table of contents
 
-* [Features Highlight](#features-highlight)
+* [Quick Highlight](#quick-highlight)
 * [Demos and Samples](#demos-and-samples)
 * [Dependencies](#dependencies)
 * [How To Use](#how-to-use)
@@ -17,7 +17,7 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 
 <br/>
 
-## Features Highlight
+## Quick Highlight
 
 #### Drag to Move / Reposition Tiles
 ![Drag to Move / Reposition Tiles](img/help-gifs/RepositionTiles.gif)
@@ -42,11 +42,20 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 
 ## How To Use
 
+* **Include Tilefy js and css files** <br/>
+  Put these two lines in the `<head>` section of your page
+
+```
+  1. <link rel="stylesheet" href="css/barick-tilify.min.css" />
+  2. <script src="js/barick-tilefy.min.js"></script>
+
+```
+
 * **Make the "Tile Descriptor" (TD)**<br/>
 
-  A TD is a json object which has 2 properties,
-  1. "tileOrder" - An array of tile IDs in the order you want them to be pickd up while being drawn on screen
-  2. "tiles" - An object containing all tile objects as value corresponding to their unique IDs as key.
+  A TD is a `json` object which has 2 properties,
+  1. `tileOrder` - An array of tile IDs in the order you want them to be pickd up while being drawn on screen
+  2. `tiles` - An object containing all tile objects as value corresponding to their unique IDs as key.
   
   So, a simple "Tile Descriptor" (TD) containing 3 tiles will simply look like,
 ```
@@ -95,10 +104,10 @@ A Windows 8.1 Metro Style Responsive Web Plugin
   config.gridCapacityPerRow = ANY_NUMBER;                       //OPTIONAL
 ```
 <br/>
-  1. config.TD: (Mandatory) This is the Tile Descriptor object we just made in the previous step.
-  2. config.btn_ID_to_Toggle_Tile_Movement: (Optional) Provide the ID of the html element which you want user to use to toggle Tile Movement / Reposition functionality ON and OFF.
-  3. config.btn_ID_to_Toggle_Tile_Resize: (Optional) Same as no. 2 but for Tile Resize functionality.
-  4. config.gridCapacityPerRow: (Optional) This is a powerful configuration option. By this you can define the total number of grids (Small Tile) that can be placed in a row. The more the number the smaller will the size of tiles will be.
+  1. `config.TD`: (Mandatory) This is the Tile Descriptor object we just made in the previous step.
+  2. `config.btn_ID_to_Toggle_Tile_Movement`: (Optional) Provide the ID of the html element which you want user to use to toggle Tile Movement / Reposition functionality ON and OFF.
+  3. `config.btn_ID_to_Toggle_Tile_Resize`: (Optional) Same as no. 2 but for Tile Resize functionality.
+  4. `config.gridCapacityPerRow`: (Optional) This is a powerful configuration option. By this you can define the total number of grids (Small Tile) that can be placed in a row. The more the number the smaller will the size of tiles will be.
   **[Remember 1 grid = 1 Small Tile. So, Medium Tiles are 2x2 i.e 4 grids are required to place a small tile. Big Tiles are 4 grids wide and 4 grids high, so 4x4=16 grids are required to place a Big Tile.]**
 
 <br/>
