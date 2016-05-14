@@ -13,6 +13,7 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 * [How To Use](#how-to-use)
 * [Contacts](#contacts)
 * [Showcase Your Website](#showcase-your-website)
+* [Support This Development](#support-this-development)
 * [Copyright and license](#copyright-and-license)
 
 
@@ -29,6 +30,7 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 ![Mobile Screenshot - barick-tilefy](img/screens/barick-tilefy-mobile-screenshot.jpg)
 
 
+
 ## Demos and Samples
 * [Vertical Scrollable Tiles Demo - Responsive on Reload](http://barick.in)
 * [Horizontally Scrollable Grouped Tiles Demo - Not Responsive](http://codotronix.github.io/barick-tilefy/samples/horizontal-scroll-demo/)
@@ -39,6 +41,8 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 "barick-tilefy" needs the following to work,
 * [jquery](https://jquery.com/)
 * [hand.js](https://handjs.codeplex.com/)
+* [animate.css](https://daneden.github.io/animate.css/)
+* [font awesome - (optional) - if you use their icons](http://fontawesome.io/)
 
 
 
@@ -122,8 +126,19 @@ $('#ID_of_Your_Container_Div').tilefy(config);
 ```
 
 
+
 ## Showcase Your Website
 I would love to see how you are using this plugin. So, if you build something cool using this plugin and don't mind showing it off to the world, just contact me know in any of the following ways and I will showcase your site in my site.
+
+
+
+## Support This Development
+Lots of Time and Love has been put into this development. It is still in baby stage and still has a long way to go. So, your support in any way will be a huge help and motivation
+  * Put a line or two on facebook, twitter or your blog
+  * Put a link on your website
+  * Tell your friends to use it
+  * Or if you really can't stop yourself from making a donation, my paypal id is barick9@gmail.com
+
 
 
 ## Contacts:
