@@ -77,10 +77,10 @@ var tile_plugins = {};
                     htm += '<div id="' +tile.id+ '" class="tile ' + tile.size + '" style="top:' + tile.top + 'px; left:' +tile.left+ 'px;" data-gridid="' +tile.gridId+ '" >'
                                 + '<a class="tileInnerContainer" target="_blank" href="' +(tile.link || 'javascript:void(0)')+ '" style="background: ' +tile.bgColor+ ';" >';
                     
-                    if (tile.iconType == 'font') {
+                    if (tile.contentType == 'font') {
                         htm += '<span class="fontIcon ' +tile.icon+ '"></span>';
                     }
-                    else if (tile.iconType == 'live') {
+                    else if (tile.contentType == 'live') {
                         htm += '<div class="live">';
                             
                         if (tile.liveImgUrls != undefined) {
@@ -93,7 +93,7 @@ var tile_plugins = {};
                         
                         htm += '</div>';
                     }
-                    else if (tile.iconType == 'plugin') {
+                    else if (tile.contentType == 'plugin') {
                         htm += '<div class="plugin"></div>';
                     }
                     
@@ -125,7 +125,7 @@ var tile_plugins = {};
             function loadPlugins () {
                 //console.log('inside loadPlugins');
                 for (var i in tiles) {
-                    if(tiles[i].iconType == 'plugin') {
+                    if(tiles[i].contentType == 'plugin') {
                         
 //                        console.log('outside timeout callback '+pathToPlugin);
 //                        setTimeout(function(){

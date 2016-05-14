@@ -7,7 +7,7 @@
                 "id": "id1",
                 "name": "Learn",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-graduation-cap",
                 "bgColor":"rgba(59, 89, 152, 0.7)"
             },
@@ -15,7 +15,7 @@
                 "id": "id2",
                 "name": "Friends",
                 "size": "small",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-users",
                 "bgColor": "rgba(139, 120, 0, 0.7)"
             },
@@ -23,7 +23,7 @@
                 "id": "id3",
                 "name": "Movies",
                 "size": "rectangle",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-film",
                 "bgColor": "rgba(142, 40, 140, 0.69)"
             },
@@ -31,7 +31,7 @@
                 "id": "id4",
                 "name": "eBooks",
                 "size": "small",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-file-pdf-o",
                 "bgColor": "rgba(64, 153, 255, 0.7)",
                 "link": "#"
@@ -40,7 +40,7 @@
                 "id": "id5",
                 "name": "Fax",
                 "size": "rectangle",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-fax",
                 "bgColor": "rgba(20, 253, 37, 0.7)",
                 "link": "#"
@@ -49,7 +49,7 @@
                 "id": "id6",
                 "name": "Coffee Break",
                 "size": "small",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-coffee",
                 "bgColor": "rgba(220, 53, 37, 0.7)",
                 "link": "#"
@@ -58,7 +58,7 @@
                 "id": "id7",
                 "name": "Download Manager",
                 "size": "small",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-cloud-download",
                 "bgColor": "rgba(220, 253, 137, 0.7)",
                 "link": "#"
@@ -67,7 +67,7 @@
                 "id": "id8",
                 "name": "Medical App",
                 "size": "big",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-heartbeat",
                 "bgColor": "rgba(255, 0, 0, 0.9)"
             },
@@ -75,7 +75,7 @@
                 "id": "id9",
                 "name": "Open University",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-university",
                 "bgColor": "rgba(220, 3, 237, 0.7)",
                 "link": "#"
@@ -84,7 +84,7 @@
                 "id": "id10",
                 "name": "Time Rhyme",
                 "size": "small",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-hourglass-half",
                 "bgColor": "rgba(220, 253, 137, 0.7)",
                 "link": "#"
@@ -93,7 +93,7 @@
                 "id": "id11",
                 "name": "Home",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-home",
                 "bgColor": "rgba(220, 253, 137, 0.7)",
                 "link": "#"
@@ -102,7 +102,7 @@
                 "id": "id12",
                 "name": "Paint",
                 "size": "small",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-paint-brush",
                 "bgColor": "rgba(67, 45, 156, 0.86)",
                 "link": "#"
