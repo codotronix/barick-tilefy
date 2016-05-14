@@ -7,7 +7,7 @@
                 "id": "id80",
                 "name": "Bullseye",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-bullseye",
                 "bgColor": "rgba(90, 25, 25, 0.71)"
             },
@@ -15,7 +15,7 @@
                 "id": "id10",
                 "name": "Piper",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-pied-piper",
                 "bgColor":"rgba(59, 89, 152, 0.7)"
             },
@@ -23,7 +23,7 @@
                 "id": "id20",
                 "name": "My Cloud",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-cloud-upload",
                 "bgColor": "rgba(139, 120, 0, 0.7)"
             },
@@ -31,7 +31,7 @@
                 "id": "id30",
                 "name": "See Further",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-binoculars",
                 "bgColor": "rgba(142, 40, 140, 0.69)"
             },
@@ -39,7 +39,7 @@
                 "id": "id50",
                 "name": "Book Cab",
                 "size": "rectangle",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-car",
                 "bgColor": "rgba(64, 153, 255, 0.7)",
                 "link": "#"
@@ -48,7 +48,7 @@
                 "id": "id40",
                 "name": "Bell Reminder",
                 "size": "rectangle",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-bell",
                 "bgColor": "rgba(20, 253, 37, 0.7)",
                 "link": "#"
@@ -57,7 +57,7 @@
                 "id": "id60",
                 "name": "Bomber",
                 "size": "rectangle",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-bomb",
                 "bgColor": "rgba(220, 53, 37, 0.7)",
                 "link": "#"
@@ -66,7 +66,7 @@
                 "id": "id70",
                 "name": "CHAT",
                 "size": "rectangle",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-commenting-o",
                 "bgColor": "rgba(220, 253, 137, 0.7)",
                 "link": "#"

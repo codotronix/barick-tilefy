@@ -7,7 +7,7 @@
                 "id": "github",
                 "name": "Github",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-github",
                 "bgColor": "rgba(10, 82, 49, 0.7)"
             },
@@ -15,7 +15,7 @@
                 "id": "facebook",
                 "name": "Facebook",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-facebook-square",
                 "bgColor":"rgba(59, 89, 152, 0.7)",
                 "link":"http://facebook.com/codotronix"
@@ -24,7 +24,7 @@
                 "id": "linkedIn",
                 "name": "linkedin",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-linkedin-square",
                 "bgColor": "rgba(139, 0, 0, 0.7)",
                 "link": "https://in.linkedin.com/in/sumanbarick"
@@ -33,7 +33,7 @@
                 "id": "stackoverflow",
                 "name": "Stack Overflow",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-stack-overflow",
                 "bgColor": "rgba(142, 140, 140, 0.69)",
                 "link": "http://stackoverflow.com/users/5017556/suman-barick"
@@ -42,7 +42,7 @@
                 "id": "twitter",
                 "name": "twitter",
                 "size": "rectangle",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-twitter",
                 "bgColor": "rgba(64, 153, 255, 0.7)",
                 "link": "https://twitter.com/codotronix"
@@ -51,7 +51,7 @@
                 "id": "whatsapp",
                 "name": "Whatsapp",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-whatsapp",
                 "bgColor": "rgba(228, 25, 25, 0.87)",
                 "link": "http://www.google.com?suman-barick"
@@ -60,7 +60,7 @@
                 "id": "eMail",
                 "name": "EMAIL",
                 "size": "rectangle",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-envelope",
                 "bgColor": "rgba(220, 253, 37, 0.7)",
                 "link": "mailto:codotronix@gmail.com"
@@ -69,7 +69,7 @@
                 "id": "gplus",
                 "name": "EMAIL",
                 "size": "medium",
-                "iconType": "font",
+                "contentType": "font",
                 "icon": "fa fa-google-plus",
                 "bgColor": "rgb(247, 0, 0)",
                 "link": "http://www.google.com?suman-barick"
