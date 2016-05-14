@@ -20,11 +20,13 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 ## Quick Highlight
 
 #### Drag to Move / Reposition Tiles
-![Drag to Move / Reposition Tiles](img/help-gifs/RepositionTiles.gif)
+![Drag to Move / Reposition Tiles - Screenshot - barick-tilefy](img/screens/RepositionTiles.gif)
 
 #### Resize Tiles [4 sizes - Small, Medium, Big, Rectangle]
-![Resize Tiles into any of the 4 available sizes](img/help-gifs/ResizeTiles.gif)
+![Resize Tiles into any of the 4 available sizes - Screenshot - barick-tilefy](img/screens/ResizeTiles.gif)
 
+#### Responsive on Page Load - Mobile Screenshot
+![Mobile Screenshot - barick-tilefy](img/screens/barick-tilefy-mobile-screenshot.jpg)
 
 
 ## Demos and Samples
