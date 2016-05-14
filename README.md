@@ -100,7 +100,6 @@ A Windows 8.1 Metro Style Responsive Web Plugin
 ```
 
 
-
 * **Make a "config" Object** <br/>
   A "config" object contains various configuration options, regarding various operations on tile. A sample "config" object would be like this
 
@@ -117,8 +116,6 @@ A Windows 8.1 Metro Style Responsive Web Plugin
   3. `config.btn_ID_to_Toggle_Tile_Resize`: (Optional) Same as no. 2 but for Tile Resize functionality.
   4. `config.gridCapacityPerRow`: (Optional) This is a powerful configuration option. By this you can define the total number of grids (Small Tile) that can be placed in a row. The more the number the smaller will the size of tiles will be.
   *[Remember 1 grid = 1 Small Tile. So, Medium Tiles are 2x2 i.e 4 grids are required to place a small tile. Big Tiles are 4 grids wide and 4 grids high, so 4x4=16 grids are required to place a Big Tile.]*
-
-
 
 
 
@@ -194,7 +191,15 @@ So, the idea is, if the `contentType` is `live`, then if `liveImgUrls` array con
 
   _"contentType": "plugin"_
 
-_Documentation Coming in Next 5 hours_
+This is the ultimate powerful tile type and its limit is only your imagination. You can build any _html/css/js_ application and put it inside this tile. Just follow these steps,
+    
+  1. Inside the `tile_plugins` folder make a folder for your plugin
+  2. The folder name should be same as the tileId in your tile definition
+  3. Inside that folder should be a file called `index.js`
+  4. In this `index.js` file you build up your HTML, bind them with js, style them with CSS
+  5. When done making the HTML, put everything inside element `$('#yourTileID .plugin')`
+  6. Done... See [tileOfTime](https://github.com/codotronix/barick-tilefy/blob/master/tile_plugins\tileOfTime) and/or [weatherNow](https://github.com/codotronix/barick-tilefy/blob/master/tile_plugins\weatherNow) for example plugin type tile.
+  
 
 
 <br/>
