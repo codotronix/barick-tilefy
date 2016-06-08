@@ -1,6 +1,6 @@
 {
     "tileOrder": 
-    ["linkedIn", "stackoverflow", "galaxy", "tileOfTime", "weatherNow", "myPictures", "barickTilify", "asteroidattack", "miniPuzzle", "facebook", "twitter", "codotronixBlog", "oneMall", "offersplus", "tankgular", "gogoltugo", "myBlog", "github", "bengalirecipes", "reactTaskMan", "txtTile"],
+    ["linkedIn", "stackoverflow", "galaxy", "tileOfTime", "weatherNow", "myPictures", "barickTilefy", "asteroidattack", "miniPuzzle", "facebook", "twitter", "codotronixBlog", "oneMall", "offersplus", "tankgular", "gogoltugo", "myBlog", "github", "bengalirecipes", "reactTaskMan", "txtTile"],
     
     "tiles": {            
             "galaxy": {
@@ -44,7 +44,7 @@
                 "name": "Hello Guest!",
                 "size": "rectangle",
                 "contentType": "live",
-                "liveTxts": ["Hi! I am Suman Barick and I love to Code", "I made this plugin \"barick-tilify\"", "Like it? Star \"barick-tilify\" repo on github", "I have made this plugin Open Source", "I'll soon make the documentation"],
+                "liveTxts": ["Hi! I am Suman Barick and I love to Code", "I made this plugin \"barick-tilefy\"", "Like it? Star \"barick-tilefy\" repo on github", "I have made this plugin Open Source", "I'll soon make the documentation"],
                 "fontColor": "#E4F978",
                 "bgColor": "rgba(255,255,255,.3)"
             },
@@ -72,7 +72,9 @@
                 "size": "small",
                 "contentType": "font",
                 "icon": "fa fa-github",
-                "bgColor": "rgba(10, 82, 49, 0.7)"
+                "bgColor": "rgba(10, 82, 49, 0.7)",
+                "link": "https://github.com/codotronix",
+                "linkTarget": "_blank"
             },
             "myBlog": {
                 "id": "myBlog",
@@ -127,8 +129,8 @@
                 "bgColor": "rgba(255,255,255,.2)",
                 "link": "http://codotronix.github.io/Tankgular/"
             },
-            "barickTilify": {
-                "id": "barickTilify",
+            "barickTilefy": {
+                "id": "barickTilefy",
                 "name": "barick-tilefy",
                 "size": "rectangle",
                 "contentType": "live",
