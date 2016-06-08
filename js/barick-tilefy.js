@@ -75,7 +75,7 @@ var tile_plugins = {};
                 for(var i in tiles) {
                     tile = tiles[i];
                     htm += '<div id="' +tile.id+ '" class="tile ' + tile.size + '" style="top:' + tile.top + 'px; left:' +tile.left+ 'px;" data-gridid="' +tile.gridId+ '" >'
-                                + '<a class="tileInnerContainer" target="_blank" href="' +(tile.link || 'javascript:void(0)')+ '" style="background: ' +tile.bgColor+ ';" >';
+                                + '<a class="tileInnerContainer" target="' + (tile.linkTarget || '_blank') + '" href="' +(tile.link || 'javascript:void(0)')+ '" style="background: ' +tile.bgColor+ ';" >';
                     
                     if (tile.contentType == 'font') {
                         htm += '<span class="fontIcon ' +tile.icon+ '"></span>';
