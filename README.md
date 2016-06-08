@@ -154,6 +154,7 @@ Now, to achieve *Tile Type 1*, we can define the tile like this, say we define a
                 "icon": "fa fa-twitter",  // The Font Awesome Icon Class to be displayed
                 "bgColor": "rgba(64, 153, 255, 0.7)",       // The Background Color of the Tile
                 "link": "https://twitter.com/codotronix"    // Link to your Twitter
+                "linkTarget": "_self"                       //Optional. Default is "_blank"
             }
 ```
    
