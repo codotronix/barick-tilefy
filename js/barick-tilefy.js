@@ -16,6 +16,8 @@
 *
 */
 
+"use strict"
+
 var tile_plugins = {};
 
 (function($) {
@@ -304,7 +306,7 @@ var tile_plugins = {};
             */
             function makeGrids () {
                 //let's calculate total filling capacity in terms of smallest squares or grids
-                fillCapacity = 0;
+                var fillCapacity = 0;
                 for (var i in tiles) {
                     if (tiles[i].size == "small") {
                         fillCapacity += 1;
@@ -367,6 +369,7 @@ var tile_plugins = {};
             function mapTilesToGrid () {
                 clearSpaceDivPosition = 0;
                 var tileID = '';
+                var gridId = '';
                 for (var j in tileOrder) {
                     //console.log("sending for tile id="+tiles[i].id);
                     tileID = tileOrder[j];

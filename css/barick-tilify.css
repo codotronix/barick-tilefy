@@ -147,7 +147,8 @@
 
 .tileResizeMenu li:hover {
     background: #5A2FAD;
-    color: #FFF;    
+    color: #FFF;
+    cursor: pointer;
 }
 
 .xs .tile {
